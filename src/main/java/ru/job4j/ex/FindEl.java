@@ -1,6 +1,7 @@
 package ru.job4j.ex;
 
 public class FindEl {
+
     private static void thr(String msg) throws ElementNotFoundException {
         throw new ElementNotFoundException(msg);
     }
@@ -9,10 +10,7 @@ public class FindEl {
         int ret = -1;
         String message = "Element not found";
         for (int i = 0; i < value.length; i++) {
-            if (value[i].length() < key.length()) {
-                thr(message);
-            }
-            if (value[i].contains(key)) {
+            if (value[i].equals(key)) {
                 ret = i;
                 break;
             }
